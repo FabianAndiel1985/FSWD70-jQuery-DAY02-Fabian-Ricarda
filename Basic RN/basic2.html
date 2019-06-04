@@ -17,21 +17,27 @@
 <body>
 	<h1>Say "Hi" to Santa</h1>
 	<div class="box">
+		<img src="img/white_box.png" alt="White box" >
+		<img src="img/santa-claus.png" alt="Santa">
 		<img src="img/white_box.png" alt="White box">
-		<img src="img/santa-claus.png" alt="Santa Claus" class="santa">
 		<img src="img/white_box.png" alt="White box">
+		<img src="img/santa-claus.png" alt="Santa Claus">
 		<img src="img/white_box.png" alt="White box">
-		<img src="img/santa-claus.png" alt="Santa Claus" class="santa">
+		<img src="img/santa-claus.png" alt="Santa Claus">
 		<img src="img/white_box.png" alt="White box">
-		<img src="img/santa-claus.png" alt="Santa Claus" class="santa">
-		<img src="img/white_box.png" alt="White box">
-		<img src="img/santa-claus.png" alt="Santa Claus" class="santa">
+		<img src="img/santa-claus.png" alt="Santa Claus">
 	</div>
 
 	<script>
-		 $('.santa').click(function() {
+		$(document).ready(function() {
+
+		$("img[src*='img/santa-claus.png']").addClass("santa");
+	
+
+		$('.santa').click(function() {
         $(this).hide()
-    })
+    	});
+	});
 
 	</script>
 
