@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Santa Claus</title>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<style type="text/css" media="screen">
+		.box{
+			display: grid;
+			grid-template-columns: 250px 250px 250px;
+			grid-template-rows: auto auto auto;
+		}		
+		img {
+			width: 200px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Say "Hi" to Santa</h1>
+	<div class="box">
+		<img src="img/white_box.png" alt="White box">
+		<img src="img/santa-claus.png" alt="Santa Claus" class="santa">
+		<img src="img/white_box.png" alt="White box">
+		<img src="img/white_box.png" alt="White box">
+		<img src="img/santa-claus.png" alt="Santa Claus" class="santa">
+		<img src="img/white_box.png" alt="White box">
+		<img src="img/santa-claus.png" alt="Santa Claus" class="santa">
+		<img src="img/white_box.png" alt="White box">
+		<img src="img/santa-claus.png" alt="Santa Claus" class="santa">
+	</div>
+
+	<script>
+		 $('.santa').click(function() {
+        $(this).hide()
+    })
+
+	</script>
+
+</body>
+</html>

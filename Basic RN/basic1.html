@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Christmas</title>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+	<h1>Welcome at Christmas town</h1>
+	<div id="xmas">
+		
+	</div>
+	<div> 
+		<img src="img/christmas_bell.png" alt="Christmas bell" width="200" id="bell" class="xmas">
+	</div>
+	<div>
+		<img src="img/santa-claus.png" alt="Santa Claus" width="200" id="santa" class="xmas">
+	</div>
+	<div>
+		<img src="img/white_box.png" alt="White box" width="200" id="box" class="xmas">
+	</div>
+
+	<script>
+		$('#bell').on('click',function(){
+			$("#xmas").text("You clicked on " +$('#bell').attr('alt'))
+		});
+		$('#santa').on('click',function(){
+			$("#xmas").text("You clicked on " +$('#santa').attr('alt'))
+		});
+		$('#box').on('click',function(){
+			$("#xmas").text("You clicked on " +$('#box').attr('alt'))
+		});
+	</script>
+
+</body>
+</html>

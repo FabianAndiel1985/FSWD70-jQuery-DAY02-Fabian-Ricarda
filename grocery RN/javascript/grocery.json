@@ -1,0 +1,9 @@
+grocery =`[
+	{"name":"Apple Juice", "bild":"img/apple.jpg", "price":1, "status": 20},
+	{"name":"Berries Juice", "bild":"img/berry.jpg", "price":2, "status":30},
+	{"name":"Carrot Juice", "bild":"img/carrot.jpg", "price":1.50, "status":50},
+	{"name":"Elderflower Juice", "bild":"img/elderflower.jpg", "price":1.70, "status":10},
+	{"name":"Kiwi Juice", "bild":"img/kiwi.jpg", "price":1.30, "status":80},
+	{"name":"Lemon Juice", "bild":"img/lemon.jpg", "price":0.90, "status":100},
+	{"name":"Orange Juice", "bild":"img/orange.jpg", "price":1.20, "status":35},
+	{"name":"Red Currant Juice", "bild":"img/red_currant.jpg", "price":1.35, "status":15}]`;
