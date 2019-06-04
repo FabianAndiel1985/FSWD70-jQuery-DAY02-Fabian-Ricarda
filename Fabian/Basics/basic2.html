@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+
+
+	<style type="text/css">
+		img {
+			width:100px;
+			height: 100px;
+		}
+
+		.santa {
+
+		}
+	</style>
+
+</head>
+<body>
+
+	<div class="lines">
+		<img src="box.png">
+		<img src="santa-claus.png" id="santa1">
+		<img src="box.png">
+	</div>
+	<div class="lines">
+		<img src="box.png">
+		<img src="santa-claus.png">
+		<img src="box.png">
+	</div>
+	<div class="lines">
+		<img src="santa-claus.png">
+		<img src="box.png">
+		<img src="santa-claus.png" >
+	</div>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+	$(document).ready(function(){
+
+		if(img.attr('src') =='santa-claus.png'){$(this).addClass("santa")}
+		// $('#santa1').addClass("santa");
+ 
+	
+
+	$('.santa').on('click', function() {
+	   $(this).css('visibility','hidden');
+	})
+});
+
+	
+
+</script>	
+
+
+
+</html>
+
+
+<!-- <div class="lines">
+		<img src="box.png">
+		<img src="santa-claus.png" class="santa">
+		<img src="box.png">
+	</div>
+	<div class="lines">
+		<img src="box.png">
+		<img src="santa-claus.png" class="santa">
+		<img src="box.png">
+	</div>
+	<div class="lines">
+		<img src="santa-claus.png" class="santa" >
+		<img src="box.png">
+		<img src="santa-claus.png" class="santa">
+	</div> -->

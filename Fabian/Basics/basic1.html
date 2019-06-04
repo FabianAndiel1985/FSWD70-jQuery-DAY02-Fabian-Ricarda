@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+</head>
+<body>
+	<img src="box.png">
+	<img src="santa-claus.png">
+	<img src="christmas-bell.png">
+
+	<hr>
+
+</body>
+
+<script type="text/javascript">
+
+	$(document).ready(function(){
+    
+	$('img:first-child').on('click', function() {
+	   alert("you clicked on the gift box");
+	})
+
+	$('img:nth-child(2)').on('click', function() {
+	   alert("you clicked on the santa Claus");
+	})
+
+	$('img:nth-child(3)').on('click', function() {
+	   alert("you clicked on the christmas-bell");
+	})
+
+});
+
+
+
+
+
+
+</script>	
+
+</html>

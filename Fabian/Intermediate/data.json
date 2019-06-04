@@ -1,0 +1,8 @@
+data = `[{"image":"cheese.jpg","name" : "Cheese", "price" : 100,"in_Stock": 12,"inBasket":0},
+		 {"image":"coffeebeans.jpg","name" : "Coffe Beans", "price" : 50 ,"in_Stock": 7,"inBasket":0},
+		 {"image":"ham.jpg","name" : "Ham", "price" : 70,"in_Stock": 3,"inBasket":0},
+		 {"image":"lemon.jpg","name" : "Lemon", "price" : 80,"in_Stock": 1,"inBasket":0},
+		 {"image":"milk.jpg","name" : "milk", "price" : 140,"in_Stock": 2,"inBasket":0},
+		 {"image":"orangeJuice.jpg","name" : "Orange Juice", "price" : 40,"in_Stock": 2,"inBasket":0},
+		 {"image":"schampus.jpg","name" : "Schampus", "price" : 3000,"in_Stock": 1,"inBasket":0}
+		]`;
