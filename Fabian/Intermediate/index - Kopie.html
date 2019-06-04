@@ -290,14 +290,7 @@
 
    			function addToCart(event) {
    				var addProduct = event.target.value;
-
-   				if ($(`div[value='${mydata[addProduct].id}']`).length > 0) { 
-   					alert("Hallo");
-   				}
-
-
-   				else  {
-   					$("#previewContainer").prepend(` <div value="${mydata[addProduct].id}"> 
+   				$("#previewContainer").prepend(` <div value="${mydata[addProduct].id}"> 
 					<table>
 						  <tr>
 							<img src="${mydata[addProduct].image}">
@@ -318,9 +311,6 @@
 
    					${mydata[addProduct].name}  </div>` 
    					)
-
-   				}
-   				
   
    				 // cart.push(addProduct);
    				// cart.push(param);
