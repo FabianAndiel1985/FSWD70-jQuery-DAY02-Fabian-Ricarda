@@ -81,6 +81,20 @@
 
 
 #main-Container {
+
+
+	#main-Container-line-zero {
+		display: flex;
+		justify-content: center;
+		#previewContainer {
+			display: none;
+			height:500px;
+			width:500px;
+			border:2px solid black;
+		}
+	}
+
+
 	
 
 	#main-Container-line-one {

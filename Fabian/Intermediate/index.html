@@ -63,10 +63,19 @@
 
 
 	<div id="main-Container">
+		<div id="main-Container-line-zero">
+			<div id="previewContainer">
+				TEST
+				TEST
+				TESH<br>
+				<br>
+			</div>
+
+		</div>
 		<div id="main-Container-line-one">
 
 			<div class="card">
-  				<img src="eReader.jpg" alt="Avatar" style="width:100%" id="img0">
+  				<img  alt="Avatar" style="width:100%" id="img0">
 			    <div class="container">
 					<table>
 					  <tr>
@@ -85,16 +94,17 @@
 					    <td>In Basket</td>
 					    <td id="basket0"></td>
 					  </tr>
+					  <p>Test </p>
 					</table>
-			     	<button value="ereader" class="addButton"> Add </button>
-			     	<button value="ereader" class="removeButton"> Remove </button>
+			     	<button value="0" class="addButton"> Add </button>
+			     	<button value="0" class="removeButton"> Remove </button>
 			    </div>
 			</div>
 
 
 
 			<div class="card">
-  				<img src="Handy.jpg" alt="Avatar" style="width:100%" id="img1">
+  				<img  alt="Avatar" style="width:100%" id="img1">
 			    <div class="container">
 			    		<table>
 					  <tr>
@@ -121,7 +131,7 @@
 
 
 			<div class="card">
-  				<img src="laser1.jpg" alt="Avatar" style="width:100%" id="img2">
+  				<img  alt="Avatar" style="width:100%" id="img2">
 			    <div class="container">
 			    	<table>
 					  <tr>
@@ -150,7 +160,7 @@
 		<div id="main-Container-line-two">
 
 			<div class="card">
-  				<img src="Tablet.jpg" alt="Avatar" style="width:100%" id="img3">
+  				<img  alt="Avatar" style="width:100%" id="img3">
 			    <div class="container">
 			    		<table>
 						  <tr>
@@ -176,7 +186,7 @@
 			</div>
 
 			<div class="card">
-  				<img src="speaker.jpg" alt="Avatar" style="width:100%" id="img4">
+  				<img  alt="Avatar" style="width:100%" id="img4">
 			    <div class="container">
 			    	<table>
 						  <tr>
@@ -203,7 +213,7 @@
 
 
 			<div class="card">
-  				<img src="tv.jpg" alt="Avatar" style="width:100%" id="img5">
+  				<img  alt="Avatar" style="width:100%" id="img5">
 			    <div class="container">
 			    	<table>
 						  <tr>
@@ -238,6 +248,8 @@
 	  <script type="text/javascript"  src="data.json"></script>
 	<script type="text/javascript">
 
+// Change JOSN Product Data
+
 		var mydata = JSON.parse(data);
 		console.log(mydata[0].name);
 
@@ -258,6 +270,8 @@
 		   
 		});
 
+// Adds add and remove function to every button		
+
 
 		window.onload= function () {
    		for (i=0;i<6;i++) {
@@ -276,23 +290,58 @@
 
    			function addToCart(event) {
    				var addProduct = event.target.value;
+   				$("#previewContainer").prepend(` <div value="${mydata[addProduct].id}"> 
+					<table>
+						  <tr>
+							<img src="${mydata[addProduct].image}">
+						  </tr>
+						  <tr>
+						    <td>Name</td>
+						    <td>${mydata[addProduct].name}</td>
+						  </tr>
+						  <tr>
+						    <td>Price</td>
+						    <td>${mydata[addProduct].price}</td>
+						  </tr>
+						  <tr>
+						    <td>In your Basket</td>
+						    <td>${mydata[addProduct].inBasket+1} </td>
+						  </tr>
+					</table>
+
+   					${mydata[addProduct].name}  </div>` 
+   					)
   
-   				 cart.push(addProduct);
+   				 // cart.push(addProduct);
    				// cart.push(param);
    			};
 
-  //  			function removeFromCart(event) {
-  //  				var removeProduct = event.target.value;
-  //  				alert(removeProduct);
-  //  				 // alert(removeProduct);
-  //  				 // cart.push(addProduct);
-  //  				// cart.push(param);
-  //  			};
+   			function removeFromCart(event) {
+   				var removeProduct = event.target.value;
 
+   				$(`#previewContainer div[value='${mydata[removeProduct].id}']`).remove();
+
+
+   				 // alert(removeProduct);
+   				 // cart.push(addProduct);
+   				// cart.push(param);
+   			};
+
+
+// Shows content of the card
 
 		// document.getElementById("showCart").addEventListener("click", function(){
  	// 		alert(cart);
 		// });
+
+
+	$('#showCart').on('click', function() {
+	   $('#previewContainer').css('display','block');
+	})
+
+
+
+
 
 	</script>
 
